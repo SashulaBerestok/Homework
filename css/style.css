@@ -90,10 +90,12 @@ table {
 }
 .justify-around {
     justify-content: space-around;
-
 }
 .justify-center{
     justify-content: center;
+}
+.items-center {
+    align-items: center;
 }
 .vertical-center{
     top: 50%;
@@ -130,13 +132,17 @@ html,body{
     padding: 60px;
 }
 
+.block {
+    display: block;
+}
+
 .has-submenu {
     position: relative;
 }
 
 .has-submenu>ul {
     display: none;
-    top:112px;
+    top:140px;
 }
 
 .has-submenu:hover>ul {
@@ -149,10 +155,14 @@ html,body{
     transition: background 2s ease;
     }
 
-    .main-submenu.transition-margenta:hover {
-        background: #9423c2;
-
+.main-submenu {
+    width: 200px;
 }
+
+.main-submenu.transition-margenta:hover {
+    background: #9423c2;
+}
+
 .main-submenu .has-submenu:hover .sprite-arrow-right {
     width: 20px;
     height: 33px;
@@ -181,21 +191,33 @@ html,body{
     opacity: 1;
     pointer-events: all;
 }
+.main-submenu a {
+    display: block;
+}
+.main-submenu a:hover {
+    background: #422cad;
+}
 #menu {
     z-index: 1;
     position: relative;
-    height: 112px;
 }
-    .transition-yellow:before{
-        content: "";
-        position: absolute;
-        transition: all 500ms ease;
-        left: 0;
-        top:50%;
-        bottom:50%;
-        background: #d4bf55;
-        width: 173px;
-    }
+
+.has-submenu-down {
+    display: table-cell;
+    vertical-align: middle;
+    height: 140px;
+}
+
+.transition-yellow:before{
+    content: "";
+    position: absolute;
+    transition: all 500ms ease;
+    left: 0;
+    top:50%;
+    bottom:50%;
+    background: #d4bf55;
+    width: 173px;
+}
 
     .sub-submenu.transition-yellow:hover:before {
         top: 49%;
@@ -574,24 +596,7 @@ h2 {
     grid-column-gap: 24px;
 }
 /* CSS BLOCK ENDS HERE */
-.ul li a :before {
-    content: "";
-    width: 100px;
-    height: 100px;
-    display: inline-block;
-    position: absolute;
-    left: 165px;
-    top: 50px;
-    background-image: url(../spritesheet.png);
-    background-position: -108px -5px;
 
-}
-
-
-
-.link{
-    margin: -50px 20px 10px 120px;
-}
 /* SPRITES */
 .sprite {
     background-image: url(../spritesheet.png);
@@ -599,12 +604,38 @@ h2 {
     display: inline-block;
     vertical-align: middle;
 }
+    .has-submenu-left:before {
+        content: '';
+        position: absolute;
+        top: 35%;
+        right: 175px;
+        /* add background image */
+        background-image: url(../spritesheet.png);
+        background-repeat: no-repeat;
+        /* position and crop the background image */
+        width: 20px;
+        height: 33px;
+        background-position: -48px -5px;
+    }
+    .has-submenu-left:hover:before {
+        background-position: -78px -5px;
+    }
 
-.sprite-arrow-down {
-    width: 33px;
-    height: 20px;
-    background-position: -5px -5px;
-    margin: 0 30px;
+
+    .has-submenu-down:after {
+        content: '';
+        position: absolute;
+        /* add background image */
+        background-image: url(../spritesheet.png);
+        background-repeat: no-repeat;
+        /* position and crop the background image */
+        width: 33px;
+        height: 20px;
+        background-position: -5px -5px;
+        margin: 0 30px;
+    }
+    .has-submenu-down:hover:after {
+        background-position: -108px -5px;
 }
 
 .sprite-arrow-left {
@@ -637,15 +668,14 @@ h2 {
     width: 100px;
     height: 100px;
     background-position: -110px -49px;
-    margin: 0 10px 40px -200px;
+    margin: 0 10px 0 0;
 }
 
 .sprite-home {
     width: 130px;
     height: 100px;
     background-position: -222px 0;
-    margin: 0 5px 40px -178px;
-
+    margin: 0 10px 0 0;
 }
 
 .sprite-instagram {
@@ -690,5 +720,40 @@ h2 {
 #side-menu{
     top: 50%;
     margin-top: -100px;
+}
+
+.has-submenu-right:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    margin: -16px 20px 0 20px;
+    /* add background image */
+    background-image: url(../spritesheet.png);
+    background-repeat: no-repeat;
+    /* position and crop the background image */
+    width: 20px;
+    height: 33px;
+    background-position: -78px -5px;
+}
+
+.has-submenu-right:hover:after {
+    background-position: -48px -5px;
+}
+.has-submenu-left:before {
+    content: '';
+    position: absolute;
+    top: 35%;
+    right: 175px;
+    /* add background image */
+    background-image: url(../spritesheet.png);
+    background-repeat: no-repeat;
+    /* position and crop the background image */
+    width: 20px;
+    height: 33px;
+    background-position: -48px -5px;
+}
+.has-submenu-left:hover:before {
+    background-position: -78px -5px;
 }
 

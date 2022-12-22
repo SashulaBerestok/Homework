@@ -8,35 +8,29 @@
 <body>
 <!-- MENU STARTS HERE -->
 <div id="menu" class="bg-blue">
-    <ul class="flex justify-around text-2xl">
-        <li class="p-4">
-            <div class="link">
-                <a href="#">Home<i class="sprite sprite-home"></i></a>
-            </div>
-        <li class="p-4">
-            <div class="link">
-                <a href="gallery.html">Gallery <i class="sprite sprite-gallery"></i></a>
-            </div>
-        <li class="has-submenu p-4">
-            <div>
-                <a href="#">Blocks<i class="sprite sprite-arrow-down"></i></a>
-            </div>
+    <ul class="flex justify-around items-center text-2xl">
+        <li>
+            <a class="p-2 block" href="#"><i class="sprite sprite-home"></i> Home</a>
+        <li>
+            <a class="p-2 block" href="gallery.html"><i class="sprite sprite-gallery"></i> Gallery</a>
+        <li class="has-submenu">
+            <a class="p-2 block has-submenu-down" href="#">Blocks</a>
             <ul class="main-submenu">
-                <li class="p-4"><a href="inline-block.html">inline</a></li>
-                <li class="p-4"><a href="table-cell.html">table-cell</a></li>
-                <li class="p-4 has-submenu">
-                    <a href="#">float<i class="sprite sprite-arrow-right"></i></a>
+                <li><a class="p-4" href="inline-block.html">inline</a></li>
+                <li><a class="p-4" href="table-cell.html">table-cell</a></li>
+                <li class="has-submenu">
+                    <a class="has-submenu-right p-4" href="#">float</a>
                     <ul class="sub-submenu sub-submenu-right">
-                        <li class="p-4"><a href="float.html">div</a></li>
-                        <li class="p-4"><a href="psevdoelements.html">after</a></li>
+                        <li><a class="p-4" href="#">div</a></li>
+                        <li><a class="p-4" href="psevdoelements.html">after</a></li>
                     </ul>
                 </li>
-                <li class="p-4"><a href="flexbox.html">flex</a></li>
-                <li class="has-submenu p-4">
-                    <a href="#"><i class="sprite sprite-arrow-left"></i>grid</a>
+                <li><a class="p-4" href="flexbox.html">flex</a></li>
+                <li class="has-submenu">
+                    <a class="has-submenu-left p-4" href="#">grid</a>
                     <ul class="sub-submenu sub-submenu-left">
-                        <li class="p-4"><a href="grid-template-colums.html">colums</a></li>
-                        <li class="p-4"><a href="grid-template-areas.html">areas</a></li>
+                        <li><a class="p-4" href="grid-template-colums.html">colums</a></li>
+                        <li><a class="p-4" href="grid-template-areas.html">areas</a></li>
                     </ul>
                 </li>
             </ul>
