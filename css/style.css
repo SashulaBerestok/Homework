@@ -1,0 +1,694 @@
+
+
+    /* http://meyerweb.com/eric/tools/css/reset/
+       v2.0 | 20110126
+       License: none (public domain)
+    */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+.clearfix:after {
+    content: "";
+    clear: both;
+    display:block;
+}
+
+* { box-sizing: border-box; }
+
+/* END RESET - START STYLE*/
+
+.main{
+    width: 800px;
+    margin: auto;
+}
+.relative{
+    position: relative;
+}
+.absolute{
+    position: absolute;
+    width:100%;
+    margin: auto;
+}
+.bg-black {
+    background: black;
+}
+.text-center {
+    text-align: center;
+}
+.text-2xl {
+    font-size: xx-large!important;
+}
+.text-white {
+    color: white;
+}
+.flex {
+    display: flex;
+}
+.flex-col {
+    flex-direction: column;
+}
+.justify-around {
+    justify-content: space-around;
+
+}
+.justify-center{
+    justify-content: center;
+}
+.vertical-center{
+    top: 50%;
+    margin-top:-16px;
+}
+#side-menu a {
+    display: block;
+    padding: 10px 0;
+}
+.fixed {
+    position:fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    padding: 25px;
+    width: 200px;
+}
+html,body{
+    scroll-behavior: smooth;
+}
+.p-2 {
+    padding: 20px;
+}
+.p-3 {
+    padding: 30px;
+}
+.p-4 {
+    padding: 40px;
+}
+.p-5{
+    padding: 50px;
+}
+.p-6{
+    padding: 60px;
+}
+
+.has-submenu {
+    position: relative;
+}
+
+.has-submenu>ul {
+    display: none;
+    top:112px;
+}
+
+.has-submenu:hover>ul {
+    display: block;
+    position: absolute;
+    background: #16b7a6;
+}
+
+.transition-margenta{
+    transition: background 2s ease;
+    }
+
+    .main-submenu.transition-margenta:hover {
+        background: #9423c2;
+
+}
+.main-submenu .has-submenu:hover .sprite-arrow-right {
+    width: 20px;
+    height: 33px;
+    background-position: -48px -5px;
+}
+
+.main-submenu .has-submenu:hover .sprite-arrow-left {
+    width: 20px;
+    height: 33px;
+    background-position: -78px -5px;
+}
+.has-submenu:hover .sprite-arrow-down{
+    width: 33px;
+    height: 20px;
+    background-position: -108px -5px;
+}
+
+.main-submenu li ul{
+    top: 0;
+    right: -173px;
+    opacity: 0;
+    pointer-events: none;
+}
+.main-submenu li:hover ul{
+    display: block;
+    opacity: 1;
+    pointer-events: all;
+}
+#menu {
+    z-index: 1;
+    position: relative;
+    height: 112px;
+}
+    .transition-yellow:before{
+        content: "";
+        position: absolute;
+        transition: all 500ms ease;
+        left: 0;
+        top:50%;
+        bottom:50%;
+        background: #d4bf55;
+        width: 173px;
+    }
+
+    .sub-submenu.transition-yellow:hover:before {
+        top: 49%;
+        bottom: 49%;
+    }
+
+.sub-submenu-right {
+    top: 5px;
+    left: 198px
+}
+
+
+.span{
+    width: 20px;
+}
+.sub-submenu-left {
+    top: -111px!important;
+    right: 199px!important;
+}
+
+.bg-blue {
+    background: aquamarine;
+}
+
+.main{
+    width: 1200px;
+}
+
+.grid{
+    display: grid;
+}
+
+.grid-cols-1 {
+    grid-template-columns: 1fr;
+}
+
+.grid-cols-2 {
+    grid-template-columns: repeat(2,auto);
+}
+.grid-one-fourth{
+    grid-template-columns: 1fr 4fr;
+}
+
+.two-grid-three-fourth{
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+}
+.gap {
+    grid-column-gap: 24px;
+}
+
+.seasons p{
+    font-size: 16px;
+    font-weight: 400;
+    padding-top: 20px;
+}
+.container{
+    width: 1200px;
+    margin: auto;
+}
+.margin-auto {
+    margin: auto;
+    display: block;
+}
+.grid-areas {
+    display: grid;
+    grid-template-areas:
+    "A A A A"
+    "B B C C"
+    "B B D D"
+    "E F F F"
+    "E G G H";
+    grid-template-columns: 238px 324px auto 458px;
+    grid-gap: 24px;
+    padding-top: 20px;
+}
+.box-1{
+    grid-area: A;
+}
+.box-2{
+    grid-area: B;
+}
+.box-3{
+    grid-area: C;
+}
+.box-4{
+    grid-area: D;
+}
+.box-5{
+    grid-area: E;
+}
+.box-6{
+    grid-area: F;
+}
+.box-7{
+    grid-area: G;
+}
+.box-8{
+    grid-area: H;
+}
+
+/* CSS BLOCK STARTS HERE */
+.float {
+    float: left;
+}
+.boat{
+    float: left;
+}
+.rock{
+    float: left;
+}
+
+.third {
+    width: 33%;
+}
+.two-thirds{
+    width: 66%;
+}
+.half {
+    width: 49%;
+}
+
+#pseudoelements p, #flexbox p {
+    padding: 10px;
+}
+
+
+#main1 {
+    width: 1200px;
+    max-width: 800px;
+    margin-top: 20px;
+    margin-left:auto;
+    margin-right:auto;
+    background: #ffffff;
+    font-size: xx-large;
+
+}
+h1 {
+    color: #422cad;
+    text-align: center;
+    font-size: 32px;
+    font-weight: 800;
+    padding: 30px;
+}
+h2 {
+    color: #8a2567;
+    text-align: center;
+    font-size: 28px;
+    font-weight: 600;
+    padding: 30px;
+}
+.content1 {
+    color: #9423c2;
+    font-size: 20px;
+    font-weight: 400;
+}
+.main1 {
+    width: 1200px;
+    margin-top: 5px;
+    margin-left:auto;
+    margin-right:auto;
+    padding: 200px;
+    font-size: 34px;
+}
+
+.main {
+    width: 1200px;
+}
+.sheet {
+    padding: 20px 0;
+
+}
+.section{
+    padding: 10px;
+    width: 600px;
+    display: table-cell;
+
+}
+
+.section2{
+    width: 600px;
+    display: table-cell;
+    padding: 10px;
+}
+
+.main p{
+    font-size: 16px;
+    font-weight: 400;
+    padding-top: 10px;
+}
+.sheet3{
+    margin: 0 auto;
+    width: 1200px;
+    padding: 10px;
+}
+.aside {
+    width: 600px;
+    display: table-cell;
+    padding: 10px;
+}
+.aside2{
+    width: 800px;
+    display: table-cell;
+    padding: 10px;
+}
+
+.wrapper2 {
+    margin: 20px auto;
+    width: 800px;
+}
+.wrapper4 {
+    margin: 20px auto;
+}
+.inner {
+    width: 400px;
+    display: table-cell;
+    padding-top: 10px;
+    padding-right: 5px;
+    text-align: left;
+}
+.sheets {
+    padding: 10px 0;
+    font-size: 0;
+
+}
+.container{
+    padding: 10px;
+    width: 380px;
+    display: inline-block;
+    font-size: 16px;
+    vertical-align: top;
+}
+
+.container2{
+    width: 550px;
+    display: inline-block;
+    font-size: 0;
+    vertical-align: top;
+    padding: 10px 10px;
+}
+
+.sheet-3{
+    margin: 0 auto;
+    width: 1200px;
+    padding: 10px;
+    font-size: 0;
+}
+.sidebar {
+    width: 580px;
+    display: inline-block;
+    padding: 10px;
+    font-size: 0;
+    vertical-align: top;
+
+}
+.sidebar3 {
+    width: 580px;
+    display: inline-block;
+    padding: 10px;
+    font-size: 20px;
+    vertical-align: top;
+
+}
+.wrapper {
+    margin: 0 auto;
+    width: 1200px;
+}
+.wrappe {
+    margin: 20px auto;
+    width: 580px;
+}
+.wrappers {
+    margin: 20px auto;
+    font-size: 0;
+}
+.leftbar {
+    display: inline-block;
+    padding-top: 10px;
+    padding-right: 5px;
+    text-align: left;
+    font-size: 0;
+    vertical-align: top;
+    width: 270px;
+}
+
+.wrapp{
+    font-size: 0;
+}
+
+.inner2{
+    margin-top: 40px;
+}
+
+.in-float{
+    float: left;
+    width: 380px;
+    padding: 10px;
+}
+
+.rasporka{
+    clear: left;
+}
+
+.in-boat{
+    width: 560px;
+    float: left;
+    padding: 10px;
+}
+.in-rock{
+    width: 560px;
+    float: left;
+    padding: 10px;
+}
+.into-rock{
+    width: 265px;
+    float: left;
+    margin-top: 20px;
+    margin-left: 5px;
+}
+.in-tok{
+    padding: 10px;
+    float: left;
+    width: 560px;
+
+}
+.on-rock {
+    width: 800px;
+    float: left;
+    padding: 10px;
+}
+.on-tok {
+    padding: 10px;
+    float: left;
+    width: 300px;
+}
+.onto-rock{
+    width: 380px;
+    float: left;
+    margin-top: 20px;
+    margin-left: 5px;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.align-center {
+    align-content: center;
+}
+
+.grid{
+    display: grid;
+}
+
+.grid-cols-3 {
+    grid-template-columns: repeat(3, auto);
+}
+
+.grid-cols-2 {
+    grid-template-columns: 1fr 1fr;
+}
+
+.grid-two-thirds {
+    grid-template-columns: 2fr 1fr;
+}
+
+.gap {
+    grid-column-gap: 24px;
+}
+/* CSS BLOCK ENDS HERE */
+.ul li a :before {
+    content: "";
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    position: absolute;
+    left: 165px;
+    top: 50px;
+    background-image: url(../spritesheet.png);
+    background-position: -108px -5px;
+
+}
+
+
+
+.link{
+    margin: -50px 20px 10px 120px;
+}
+/* SPRITES */
+.sprite {
+    background-image: url(../spritesheet.png);
+    background-repeat: no-repeat;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.sprite-arrow-down {
+    width: 33px;
+    height: 20px;
+    background-position: -5px -5px;
+    margin: 0 30px;
+}
+
+.sprite-arrow-left {
+    width: 20px;
+    height: 33px;
+    background-position: -48px -5px;
+    margin: 0 0 0 -30px;
+}
+
+.sprite-arrow-right {
+    width: 20px;
+    height: 33px;
+    background-position: -78px -5px;
+    margin: 0 20px;
+}
+
+.sprite-arrow-up {
+    width: 33px;
+    height: 20px;
+    background-position: -108px -5px;
+}
+
+.sprite-facebook {
+    width: 32px;
+    height: 32px;
+    background-position: -151px -5px;
+}
+
+.sprite-gallery {
+    width: 100px;
+    height: 100px;
+    background-position: -110px -49px;
+    margin: 0 10px 40px -200px;
+}
+
+.sprite-home {
+    width: 130px;
+    height: 100px;
+    background-position: -222px 0;
+    margin: 0 5px 40px -178px;
+
+}
+
+.sprite-instagram {
+    width: 32px;
+    height: 32px;
+    background-position: -5px -115px;
+}
+
+.sprite-menu {
+    width: 104px;
+    height: 104px;
+    background-position: -222px -115px;
+    margin: 0 5px 60px -170px;
+}
+
+.sprite-reddit {
+    width: 32px;
+    height: 32px;
+    background-position: -47px -115px;
+}
+
+
+
+/* END SPRITES */
+
+
+#underground {
+
+    position:fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+
+.bg-darksalmon{
+    background: darksalmon;
+}
+.justify-flex-end{
+    justify-content: flex-end;
+}
+#side-menu{
+    top: 50%;
+    margin-top: -100px;
+}
+

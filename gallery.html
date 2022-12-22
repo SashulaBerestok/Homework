@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+    <head>
+        <meta charset="UTF-8">
+        <title>position-homework</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <!-- MENU STARTS HERE -->
+    <div id="menu" class="bg-blue">
+        <ul class="flex justify-around text-2xl">
+            <li class="p-4">
+                <div class="link">
+                    <a href="#">Home<i class="sprite sprite-home"></i></a>
+                </div>
+            <li class="p-4">
+                <div class="link">
+                    <a href="#">Gallery <i class="sprite sprite-gallery"></i></a>
+                </div>
+            <li class="has-submenu p-4">
+                <div>
+                    <a href="#">Blocks<i class="sprite sprite-arrow-down"></i></a>
+                </div>
+                <ul class="main-submenu">
+                    <li class="p-4"><a href="inline-block.html">inline</a></li>
+                    <li class="p-4"><a href="table-cell.html">table-cell</a></li>
+                    <li class="p-4 has-submenu">
+                        <a href="#">float<i class="sprite sprite-arrow-right"></i></a>
+                        <ul class="sub-submenu sub-submenu-right">
+                            <li class="p-4"><a href="float.html">div</a></li>
+                            <li class="p-4"><a href="psevdoelements.html">after</a></li>
+                        </ul>
+                    </li>
+                    <li class="p-4"><a href="flexbox.html">flex</a></li>
+                    <li class="has-submenu p-4">
+                        <a href="#"><i class="sprite sprite-arrow-left"></i>grid</a>
+                        <ul class="sub-submenu sub-submenu-left">
+                            <li class="p-4"><a href="grid-template-colums.html">colums</a></li>
+                            <li class="p-4"><a href="grid-template-areas.html">areas</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <!-- MENU ENDS HERE -->
+    <body class="bg-black">
+        <div class="main">
+            <div class="relative" id="winter">
+                <img class="margin-auto" src="images/1winter.jpg" alt="photo dark winter view">
+                <div class="vertical-center absolute bg-black text-center text-2xl text-white">
+                    <p>WINTER</p>
+                </div>
+           </div>
+            <div class="relative" id="spring">
+                <img class="margin-auto" src="images/2spring.jpg" alt="photo spring style sea view">
+                <div class="vertical-center absolute bg-black text-center text-2xl text-white">
+                    <p>SPRING</p>
+                </div>
+            </div>
+            <div class="relative" id="summer">
+                <img class="margin-auto" src="images/3summer.jpg" alt="photo summer vibe view">
+                <div class="vertical-center absolute bg-black text-center text-2xl text-white">
+                    <p>SUMMER</p>
+                </div>
+            </div>
+            <div class="relative" id="autumn">
+                <img class="margin-auto" src="images/4autumn.jpg" alt="photo autumn authentic view">
+                <div class="vertical-center absolute bg-black text-center text-2xl text-white">
+                    <p>AUTUMN</p>
+                </div>
+            </div>
+            <div id="side-menu" class="fixed text-2xl">
+                <div>
+                    <a href="#winter">COLD</a>
+                </div>
+                <div>
+                    <a href="#spring">FRESH</a>
+                </div>
+                <div>
+                    <a href="#summer">HOT</a>
+                </div>
+                <div>
+                    <a href="#autumn">DEEP</a>
+                </div>
+            </div>
+        </div>
+        <div id="underground" class="bg-darksalmon">
+            <ul class="flex justify-flex-end">
+                <li class="p-2">
+                    <a href="https://www.facebook.com/sasha.berestok/">
+                        <i class="sprite hover sprite-facebook"></i>
+                    </a>
+                </li>
+                <li class="p-2">
+                    <a href="https://www.instagram.com/sashaberestok/">
+                        <i class="sprite sprite-instagram"></i>
+                    </a>
+                </li>
+                <li class="p-2">
+                    <a href="https://www.reddit.com/u/Sweaty_Department847/">
+                        <i class="sprite sprite-reddit"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </body>
+</html>
